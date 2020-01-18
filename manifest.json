@@ -1,10 +1,10 @@
 {
-    "name": "Stats! Now!",
+    "name": "Don't Be A Fool!",
     "version": "1.0",
-    "description": "How do i spend my time",
+    "description": "You are a fool!",
     "permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
     "background": {
-      "scripts": ["background.js"],
+      "scripts": ["./js/background.js"],
       "persistent": false
     },
     "options_page": "options.html",
