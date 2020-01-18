@@ -14,57 +14,19 @@ changeColor.onclick = function(element) {
     });
   };
 
-// var vis = (function(){
-//     var stateKey, eventKey, keys = {
-//         hidden: "visibilitychange",
-//         webkitHidden: "webkitvisibilitychange",
-//         mozHidden: "mozvisibilitychange",
-//         msHidden: "msvisibilitychange"
-//     };
-//     for (stateKey in keys) {
-//         if (stateKey in document) {
-//             eventKey = keys[stateKey];
-//             break;
-//         }
-//     }
-//     return function(c) {
-//         if (c) document.addEventListener(eventKey, c);
-//         return !document[stateKey];
-//     }
-// })();
+  function check_title(title) {
+    title = title.toString().replace(/\s+/g, ' ').trim();
+    var title_display = document.getElementById("title-display");
 
-// vis(function(){
-// 	document.title = vis() ? 'Visible' : 'Not visible';
-// 	console.log(new Date, 'visible ?', vis());
-// });
+    title_display.innerHTML = title.toString();
+}
 
-// // to set the initial state
-// document.title = vis() ? 'Visible' : 'Not visible';
+function extract_hostname(url) {
+    var a = document.createElement('a');
+    a.href = url;
+    return a.hostname;
+}
 
-// document.addEventListener('visibilitychange', function(ev) {
-//     console.log(`Tab state : ${document.visibilityState}`);
-//   });
-
-// var visibilitychange = getVisibilityEvent();
-// var time = [];
-// document.addEventListener(visibilityChangeEvent, function(e) {
-
-// // If the document is hidden we want to pause the video.
-// if (document[hidden]) {
-//     console.log("nothing")
-// } else {
-//     t
-// }
-// });
-chrome.storage.sync.set({key: value}, function() {
-    console.log('Value is set to ' + value);
-  });
-
-  chrome.storage.sync.get(['key'], function(result) {
-    console.log('Value currently is ' + result.key);
-  });
-
-chrome.tabs.onCreated.addEventListener( function(tab) {
-    chrome.local.sync.set(tab.id = performance.now());
-    console.log(tab.id, "tab")
-});
+document.addEventListener('DOMContentLoaded', function() {
+  this.title 
+})
